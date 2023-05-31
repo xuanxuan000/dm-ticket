@@ -3,9 +3,8 @@
 
 大麦网自动购票, 支持docker一键部署。
 
-这软件没用的，不要Star了，不要再尝试了。
-[https://github.com/ClassmateLin/dm-ticket/issues/78](https://github.com/ClassmateLin/dm-ticket/issues/78)
-
+**这软件没用的，不要Star了，不要fork了，不要再尝试了。
+**
 ## 特别声明
 - 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 - 编写本项目主要目的为学习和研究Rust，无法保证项目内容的合法性、准确性、完整性和有效性。
