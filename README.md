@@ -18,7 +18,7 @@
 
 ## 使用说明
 
-- 下载docker-compose配置文件: `wget https://github.com/ClassmateLin/dm-ticket/releases/download/v0.1.2/dm-ticket.zip`
+- 下载docker-compose配置文件: `wget https://github.com/ClassmateLin/dm-ticket/releases/download/v0.1.3/dm-ticket.zip`
 - 解压zip: `unzip dm-ticket.zip && cd dm-ticket`
 - 运行容器: `docker-compose up -d`
 - 修改配置: `vim config/config.yaml`, 配置项在config/config.yaml中有详细注释。
