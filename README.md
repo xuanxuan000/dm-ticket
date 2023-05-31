@@ -3,8 +3,9 @@
 
 大麦网自动购票, 支持docker一键部署。
 
-**这软件没用的，不要Star了，不要fork了，不要再尝试了。
-**
+**这软件没用的，不要Star了，不要fork了，不要再尝试了。**
+
+
 ## 特别声明
 - 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 - 编写本项目主要目的为学习和研究Rust，无法保证项目内容的合法性、准确性、完整性和有效性。
@@ -17,7 +18,7 @@
 
 ## 使用说明
 
-- 下载docker-compose配置文件: `wget https://github.com/ClassmateLin/dm-ticket/releases/download/v0.1.0/dm-ticket.zip`
+- 下载docker-compose配置文件: `wget https://github.com/ClassmateLin/dm-ticket/releases/download/v0.1.2/dm-ticket.zip`
 - 解压zip: `unzip dm-ticket.zip && cd dm-ticket`
 - 运行容器: `docker-compose up -d`
 - 修改配置: `vim config/config.yaml`, 配置项在config/config.yaml中有详细注释。

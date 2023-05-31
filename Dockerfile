@@ -15,7 +15,7 @@ COPY .cargo /usr/src/dm-ticket/.cargo
 
 WORKDIR /usr/src/dm-ticket
 
-RUN mkdir src/bin && cat src/main.rs > src/bin/login.rs
+RUN mkdir src/bin && cat src/main.rs > src/bin/login.rs && cat src/main.rs > src/bin/ticket.rs
 
 RUN cargo build --release --verbose
 
@@ -33,7 +33,7 @@ ENV TZ=Asia/Shanghai
 
 RUN sed -i "s/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g" /etc/apk/repositories \
     && apk update  \
-    && apk add --no-cache vim tzdata \
+    && apk add --no-cache vim tzdata bind-tools curl \
     && echo "${TZ}" > /etc/timezone \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
     && rm -rf /var/cache/apk/*
@@ -44,4 +44,6 @@ COPY --from=builder /usr/src/dm-ticket/target/release/dm-ticket /usr/bin/dm-tick
 
 COPY --from=builder /usr/src/dm-ticket/target/release/dm-login /usr/bin/dm-login
 
-CMD ["/usr/sbin/crond", "-f", "-d", "0"]
+COPY scripts/start.sh /usr/bin/start
+
+CMD ["/usr/bin/start"]
