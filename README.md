@@ -3,9 +3,8 @@
 
 大麦网自动购票, 支持docker一键部署。
 
-**友情提示:** 
-1. 请先将README看完, 会避免一些问题。
-2. 如有问题，大部分可以在issue中找到答案。
+这软件没用的，不要Star了，不要再尝试了。
+[https://github.com/ClassmateLin/dm-ticket/issues/78](https://github.com/ClassmateLin/dm-ticket/issues/78)
 
 ## 特别声明
 - 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
