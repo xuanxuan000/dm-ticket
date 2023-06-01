@@ -3,9 +3,6 @@
 
 大麦网自动购票, 支持docker一键部署。
 
-**这软件没用的，不要Star了，不要fork了，不要再尝试了。**
-
-
 ## 特别声明
 - 本项目内所有资源文件，禁止任何公众号、自媒体进行任何形式的转载、发布。
 - 编写本项目主要目的为学习和研究Rust，无法保证项目内容的合法性、准确性、完整性和有效性。
@@ -16,11 +13,17 @@
 - 所有直接或间接使用本项目的个人和组织，应24小时内完成学习和研究，并及时删除本项目中的所有内容。如对本项目的功能有需求，应自行开发相关功能。
 - 本项目保留随时对免责声明进行补充或更改的权利，直接或间接使用本项目内容的个人或组织，视为接受本项目的特别声明。
 
+## 注意事项
+
+- 联系人需要事先填写,如果未下过订单,需要先下个订单,填写好联系人,然后取消订单,不用付款
+- 收货地址需要事先填写
+
 ## 使用说明
 
 - 下载docker-compose配置文件: `wget https://github.com/ClassmateLin/dm-ticket/releases/download/v0.1.3/dm-ticket.zip`
 - 解压zip: `unzip dm-ticket.zip && cd dm-ticket`
 - 运行容器: `docker-compose up -d`
+- 运行多个容器: ``docker run -itd -v `pwd`/config:/src/config --net=dm-ticket_dm_network -e RUST_LOG="INFO" -e TOKEN_SERVER_URL="http://token-server:8080" --name dm-ticket_2 classmatelin/dm-ticket``
 - 修改配置: `vim config/config.yaml`, 配置项在config/config.yaml中有详细注释。
 - 运行脚本: `docker exec -it dm-ticket dm-ticket`
   - sample 1:
